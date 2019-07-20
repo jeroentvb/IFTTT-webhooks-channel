@@ -1,0 +1,24 @@
+{
+  "name": "ifttt-webhooks-channel",
+  "version": "1.0.0",
+  "description": "Tiny package to trigger an IFTTT event using the webhooks channel",
+  "main": "ifttt.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeroentvb/ifttt-webhooks-channel.git"
+  },
+  "keywords": [],
+  "author": "jeroentvb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeroentvb/ifttt-webhooks-channel/issues"
+  },
+  "homepage": "https://github.com/jeroentvb/ifttt-webhooks-channel#readme"
+}
