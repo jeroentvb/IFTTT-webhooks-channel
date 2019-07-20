@@ -1,5 +1,5 @@
 # ifttt-webhooks-channel
-Tiny package to trigger an IFTTT event using the webhooks channel
+Tiny package to trigger an IFTTT event using the [webhooks channel](https://ifttt.com/maker_webhooks)
 
 ## Installation
 ```sh
