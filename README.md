@@ -1,9 +1,15 @@
 # ifttt-webhooks-channel
 Tiny package to trigger an IFTTT event using the [webhooks channel](https://ifttt.com/maker_webhooks)
 
+## Table of contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Methods](#methods)
+  * [Post()](#post)
+
 ## Installation
 ```sh
-npm install jeroentvb/ifttt-webhooks-channel
+npm install ifttt-webhooks-channel
 ```
 
 ## Usage
@@ -15,8 +21,11 @@ const IFTTT = require('ifttt-webhooks-channel')
 const ifttt = new IFTTT(key) // key is where your webhooks channel key goes
 ```
 
+## Methods
+A list of methods that `IFTTT` contains
+
 ### Post
-This function triggers an ifttt event via the webhooks channel.
+Sends a post request to the webhooks channel to trigger an ifttt event.
 ```js
 ifttt.post(eventName, value)
 ```
