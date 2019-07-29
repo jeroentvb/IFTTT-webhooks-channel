@@ -7,14 +7,14 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeroentvb/ifttt-webhooks-channel.git"
   },
-  "keywords": [],
+  "keywords": [
+    "ifttt"
+  ],
   "author": "jeroentvb",
   "license": "ISC",
   "bugs": {
