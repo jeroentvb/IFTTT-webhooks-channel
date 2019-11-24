@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const helper = require('./modules/helper')
 
 class IFTTT {
   constructor (key) {
@@ -7,31 +8,19 @@ class IFTTT {
   }
 
   async post (eventName, value) {
-    if (!eventName) return new Error('No event name given.')
-    if (value && !Array.isArray(value)) return new TypeError('The values must be in an array.')
+    if (!eventName) throw new Error('No event name given.')
+    if (value && !Array.isArray(value)) throw new TypeError('The values must be in an array.')
 
-    try {
-      const res = await fetch(`https://maker.ifttt.com/trigger/${eventName}/with/key/${this.key}`, {
-        method: 'post',
-        body: value
-          ? JSON.stringify({
-            value1: value[0],
-            value2: value[1],
-            value3: value[2]
-          }) : '',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+    const res = await fetch(
+      helper.createUrl(eventName, this.key),
+      helper.createRequestOptions('post', value)
+    )
 
-      if (res.status !== 200) {
-        return new Error(`POST request failed with the following code: ${res.status}, ${res.statusText}`)
-      }
-
-      return res
-    } catch (err) {
-      return err
+    if (res.status !== 200) {
+      throw new Error(`POST request failed with the following code: ${res.status}, ${res.statusText}`)
     }
+
+    return res
   }
 }
 
