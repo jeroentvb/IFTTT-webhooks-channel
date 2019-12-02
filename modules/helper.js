@@ -1,5 +1,5 @@
 function createUrl (eventName, key) {
-  return `https://maker.ifttt.com/trigger/${eventName}/with/key/${this.key}`
+  return `https://maker.ifttt.com/trigger/${eventName}/with/key/${key}`
 }
 
 function createRequestOptions (method, value) {
