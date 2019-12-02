@@ -1,4 +1,5 @@
 # ifttt-webhooks-channel
+[![npm version](https://badge.fury.io/js/ifttt-webhooks-channel.svg)](https://badge.fury.io/js/ifttt-webhooks-channel)
 [![Maintainability](https://api.codeclimate.com/v1/badges/fa4a732362265adfd7c5/maintainability)](https://codeclimate.com/github/jeroentvb/IFTTT-webhooks-channel/maintainability)  
 Tiny package to trigger an IFTTT event using the [webhooks channel](https://ifttt.com/maker_webhooks)
 
