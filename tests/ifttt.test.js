@@ -8,7 +8,7 @@ const { Response } = jest.requireActual('node-fetch')
 const { API_URL, REQUEST_OPTIONS } = require('./constants')
 
 describe('The ifttt class', () => {
-  it('post should return a response object', async () => {
+  it('should post should return a response object', async () => {
     fetch.mockReturnValue(Promise.resolve(new Response()))
 
     const res = await ifttt.post('test')
