@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest",
     "lint": "standard",
-    "prepublishOnly": "npm run lint"
+    "prepublishOnly": "npm run lint && npm test"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
