@@ -5,7 +5,8 @@
   "main": "ifttt.js",
   "files": [
     "modules/**/*",
-    "ifttt.js"
+    "ifttt.js",
+    "ifttt.d.ts"
   ],
   "scripts": {
     "test": "jest",
