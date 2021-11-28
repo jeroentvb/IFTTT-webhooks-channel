@@ -1,5 +1,5 @@
-const fetch = require('node-fetch')
-const helper = require('./modules/helper')
+import fetch from 'node-fetch'
+import helper from './modules/helper'
 
 class IFTTT {
   constructor (key) {
@@ -24,4 +24,4 @@ class IFTTT {
   }
 }
 
-module.exports = IFTTT
+export default IFTTT

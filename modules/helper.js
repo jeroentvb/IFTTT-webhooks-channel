@@ -18,7 +18,7 @@ function createRequestOptions (method, value) {
   }
 }
 
-module.exports = {
+export default {
   createUrl,
   createRequestOptions
 }
