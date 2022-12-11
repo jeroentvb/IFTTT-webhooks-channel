@@ -1,18 +1,20 @@
-/* global describe, it, expect */
+/* global describe, it, expect, beforeEach, Response */
 
-import { jest } from '@jest/globals'
 import IFTTT from '../ifttt'
-import fetch from 'node-fetch'
+import fetchMock from 'jest-fetch-mock'
 import { API_URL, REQUEST_OPTIONS } from './constants'
 
-const Ifttt = new IFTTT('test_key')
-jest.mock('node-fetch')
+fetchMock.enableMocks()
 
-const { Response } = jest.requireActual('node-fetch')
+const Ifttt = new IFTTT('test_key')
+
+beforeEach(() => {
+  fetch.resetMocks()
+})
 
 describe('The ifttt class', () => {
   it('should post should return a response object', async () => {
-    fetch.mockReturnValue(Promise.resolve(new Response()))
+    fetch.mockResponseOnce()
 
     const res = await Ifttt.post('test')
 
@@ -44,9 +46,9 @@ describe('The ifttt class', () => {
   })
 
   it('should throw an error if the status code is not 200', async () => {
-    fetch.mockReturnValue(Promise.resolve(new Response(null, {
+    fetch.mockReturnValue(new Response(null, {
       status: 500
-    })))
+    }))
 
     await expect(Ifttt.post('test'))
       .rejects
