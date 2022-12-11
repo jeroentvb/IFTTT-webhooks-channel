@@ -1,6 +1,6 @@
 {
   "name": "ifttt-webhooks-channel",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "description": "Tiny package to trigger an IFTTT event using the webhooks channel",
   "main": "ifttt.js",
   "type": "module",
