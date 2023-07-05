@@ -1,5 +1,3 @@
-ESM version available [here](https://github.com/jeroentvb/IFTTT-webhooks-channel/releases/tag/v2.0.0).
-
 # ifttt-webhooks-channel
 [![npm version](https://badge.fury.io/js/ifttt-webhooks-channel.svg)](https://badge.fury.io/js/ifttt-webhooks-channel)
 [![Maintainability](https://api.codeclimate.com/v1/badges/fa4a732362265adfd7c5/maintainability)](https://codeclimate.com/github/jeroentvb/IFTTT-webhooks-channel/maintainability)  
@@ -19,11 +17,11 @@ npm install ifttt-webhooks-channel
 
 ## Usage
 ```js
-// Require the module in your project
-const IFTTT = require('ifttt-webhooks-channel')
+// Import the module in your project
+import IFTTT from 'ifttt-webhooks-channel'
 
 // Create a new IFTTT instance
-const ifttt = new IFTTT(key) // key is where your webhooks channel key goes
+const Ifttt = new IFTTT(key) // key is where your webhooks channel key goes
 ```
 
 ## Methods
@@ -32,7 +30,7 @@ A list of methods that `IFTTT` contains
 ### Post
 Sends a post request to the webhooks channel to trigger an ifttt event.
 ```js
-ifttt.post(eventName, value)
+Ifttt.post(eventName, value)
   .then(res => console.log(res))
   .catch(err => console.error(err))
 ```
@@ -45,9 +43,9 @@ The function returns the response object if the post was succesful. If there was
 ## Example
 ```js
 const IFTTT = require('ifttt-webhooks-channel')
-const ifttt = new IFTTT('your_webhooks_channel_key')
+const Ifttt = new IFTTT('your_webhooks_channel_key')
 
-ifttt.post('event_name', [
+Ifttt.post('event_name', [
   'value 1',
   'item 2',
   'string 3'

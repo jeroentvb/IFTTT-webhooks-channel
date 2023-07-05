@@ -1,7 +1,6 @@
 /* global describe, it, expect */
-
-const helper = require('../modules/helper')
-const { API_URL, REQUEST_OPTIONS } = require('./constants')
+import helper from '../modules/helper'
+import { API_URL, REQUEST_OPTIONS } from './constants'
 
 describe('The helper mobule', () => {
   it('createUrl should return the API url', () => {

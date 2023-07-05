@@ -1,7 +1,7 @@
-const fetch = require('node-fetch')
-const helper = require('./modules/helper')
+/* global fetch */
+import helper from './modules/helper'
 
-class IFTTT {
+export default class IFTTT {
   constructor (key) {
     if (!key || typeof key !== 'string') throw new Error('You need to set a key before making a request')
     this.key = key
@@ -23,5 +23,3 @@ class IFTTT {
     return res
   }
 }
-
-module.exports = IFTTT

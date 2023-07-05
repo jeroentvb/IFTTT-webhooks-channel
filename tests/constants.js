@@ -1,6 +1,6 @@
-const API_URL = 'https://maker.ifttt.com/trigger/test/with/key/test_key'
+export const API_URL = 'https://maker.ifttt.com/trigger/test/with/key/test_key'
 
-const REQUEST_OPTIONS = {
+export const REQUEST_OPTIONS = {
   method: 'post',
   body: '',
   headers: {
@@ -8,7 +8,7 @@ const REQUEST_OPTIONS = {
   }
 }
 
-module.exports = {
-  API_URL,
-  REQUEST_OPTIONS
-}
+// module.exports = {
+//   API_URL,
+//   REQUEST_OPTIONS
+// }
