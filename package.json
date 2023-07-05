@@ -10,7 +10,7 @@
     "ifttt.d.ts"
   ],
   "scripts": {
-    "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest",
     "lint": "standard",
     "prepublishOnly": "npm run lint && npm test"
   },
