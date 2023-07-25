@@ -42,7 +42,7 @@ The function returns the response object if the post was succesful. If there was
 
 ## Example
 ```js
-const IFTTT = require('ifttt-webhooks-channel')
+import IFTTT from 'ifttt-webhooks-channel'
 const Ifttt = new IFTTT('your_webhooks_channel_key')
 
 Ifttt.post('event_name', [
